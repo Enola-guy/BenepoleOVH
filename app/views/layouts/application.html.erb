@@ -1,0 +1,36 @@
+<ul id="dropdown1" class="dropdown-content">
+<li><%= link_to "English", locale: "en" %></li>
+<li class="divider"></li>
+<li><%= link_to "French", locale: "fr" %></li>
+</ul>
+<nav>
+  <div class="nav-wrapper blue darken-1">
+    <a href="welcome" class="medium material-icons middle-left">library_music</a>
+    <ul class="right middle-hide-on-med-and-down">
+      <li><a href="personnes">Personnes</a></li>
+      <li><a href="rapports">Rapports</a></li>
+      <li><a href="shifts">Shifts</a></li>
+      <li><a href="festivals">Festivals</a></li>
+      <li><a href="personnes/sign_up">Sign Up</a></li>
+      <li><a href="personnes/sign_in">Sign In</a></li>
+      <!-- Dropdown Trigger -->
+      <li><a class="dropdown-button middle"  data-activates="dropdown1">Language<i class="small material-icons right">language</i></a></li>
+    </ul>
+  </div>
+</nav>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Benepole</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  	  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+<p class="notice"><%= notice %></p>
+<p class="alert"><%= alert %></p>
+<%= yield %>
+
+</body>
+</html>
