@@ -29,6 +29,9 @@ append :linked_files, 'config/database.yml', 'config/secrets.yml'
 # Default value for linked_dirs is []
 append :linked_dirs, 'log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'db/production.sqlite3'
 
+set :nginx_config_name, 'benepole_config'
+set :nginx_server_name, 'vps351910.ovh.net'
+
 # Default value for default_env is {}
 # set :default_env, { path: "/opt/ruby/bin:$PATH" }
 
