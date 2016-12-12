@@ -79,7 +79,10 @@ test:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
 production:
-  <<: *default
-  database: benepoleDB
-  username: root
-  password: root
+  adapter: postgresql
+  encoding: unicode
+  database: benepoledb
+  username: deploy_db
+  password: deploy_db
+  host: localhost
+  port: 5432
