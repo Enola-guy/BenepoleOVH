@@ -11,7 +11,7 @@ Rails.application.routes.draw do
     resources :missions
     resources :festivals  
     resources :devise
-    devise_for :personnes
+    devise_for :personnes, :path => "fr/personnes/sign_up"
   end
   match'*path', to: redirect("/#{I18n.default_locale}/%{path}"), via: [:get, :post] 
 
