@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   
-  devise_for :personnes
+  
   root 'welcome#index'
   #source https://www.youtube.com/watch?v=kBdZ9_yGLjg
   scope ":locale", locale: /#{I18n.available_locales.join("|")}/ do
@@ -11,6 +11,7 @@ Rails.application.routes.draw do
     resources :missions
     resources :festivals  
     resources :devise
+    devise_for :personnes
   end
   match'*path', to: redirect("/#{I18n.default_locale}/%{path}"), via: [:get, :post] 
 
