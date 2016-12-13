@@ -8,7 +8,7 @@ Bundler.require(*Rails.groups)
 
 
 #rajouté pour devise
-config.assets.initialize_on_precompile = false
+#config.assets.initialize_on_precompile = false
 module Benepole
   class Application < Rails::Application
     # Settings in config/environments/* take precedence over those specified here.
