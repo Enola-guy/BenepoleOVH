@@ -5,19 +5,21 @@ Rails.application.routes.draw do
   #source https://www.youtube.com/watch?v=kBdZ9_yGLjg
   scope ":locale", locale: /#{I18n.available_locales.join("|")}/ do
     root 'welcome#index'
-    devise_for :personnes
-    resources :welcome
-    resources :shifts
-    resources :rapports
-    resources :personnes
-      resources :devise
-    resources :missions
-    resources :festivals  
-    
-
+  devise_for :personnes
+  resources :welcome
+  resources :shifts
+  resources :rapports
+  resources :missions
+  resources :festivals
+  resources :personnes
+    resources :devise
   end
-  match'*path', to: redirect("/#{I18n.default_locale}/%{path}"), via: [:get, :post] 
+  
 
+  match'*path', to: redirect("/#{I18n.default_locale}/%{path}"), via: [:get, :post] 
+  
+  #sans cette ligne mon root ne fonctionne pas malgré le scope... je comprends pas pourquoi
+  match '', to: redirect("/#{I18n.locale}"), via: [:get]
 
   # j'ai dût rajouter à la fin de la ligne le "via get/post"
   
