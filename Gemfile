@@ -1,4 +1,6 @@
 source 'https://rubygems.org'
+#imageeeeeeeee
+gem "paperclip", "~> 5.0.0"
 #login
 gem 'devise'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
