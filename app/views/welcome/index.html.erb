@@ -1,3 +1,25 @@
+<style>
+ul {
+    margin: 20;
+}</style>
+
 <h1>Benepole</h1>
-<p>Beaucoup de choses de fonctionnent pas comme prévues.</p>
-<p>Liste des implémentations demandées à venir.</p>
+<h2>Ce qui a été fait:</h2>
+
+ <ul style="list-style-type:circle">
+  <li>-Internationalisation avec la locale directement dans l'adresse URL</li>
+  <li>-Materialize</li>
+  <li>-Utilisation quotidienne de Git pendant les 2 semaines de codage</li>
+  <li>-Déploiement à l'aide de Capistrano sur un VPS</li>
+  <li>-Administration du VPS, nginx et puma utilisés</li>
+  <li>-Devise (presque)</li>
+</ul> 
+
+<h2>Ce qui ne fonctionne pas:</h2>
+ <ul style="list-style-type:circle">
+  <li>-Les routes sont complètement buggés (problème dans routes.rb et views/layouts/application.html</li>
+  <li>-Les dates avec Materialize sont ingérable en POST</li>
+  <li>-Le dropdown des langues fonctionne qu'une seule fois ensuite il devient fou, le problème doit venir du $(document).ready(function() aussi dans layouts/application.html</li>
+  <li>-Le logo en haut à gauche ne veut pas s'afficher en gros...</li>
+</ul> 
+

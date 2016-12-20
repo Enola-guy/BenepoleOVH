@@ -23,4 +23,6 @@ $(document).on("turbolinks:load",function(){
      selectMonths: true,
      selectYears: 15 // Creates a dropdown of 15 years to control year
   });
+
+  $(".dropdown-button").dropdown({ hover: false });
 });

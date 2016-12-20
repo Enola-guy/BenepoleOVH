@@ -3,6 +3,10 @@ Rails.application.configure do
 
   #Pour DEVISE
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+  
+  #pour PAPERCLIP
+  Paperclip.options[:command_path] = "/usr/local/bin/"
+
   # Settings specified here will take precedence over those in config/application.rb.
 
   # In the development environment your application's code is reloaded on

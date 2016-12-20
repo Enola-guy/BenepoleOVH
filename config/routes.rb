@@ -10,7 +10,6 @@ Rails.application.routes.draw do
     resources :missions
     resources :festivals
   end
-
   match "*path" => "application#check_local", via: [:get, :post, :put, :patch, :delete]
 
   root 'welcome#index'
