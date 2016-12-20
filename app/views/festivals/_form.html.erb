@@ -17,12 +17,22 @@
   </div>
   <div class="field">
     <%= f.label :date %><br>
-    <%= f.date_select :date %>
+    <%= f.date_field :date , class: "datepicker" %>
   </div>
+
   <div class="field">
     <%= f.label :status %><br>
-    <%= f.check_box :status %>
+    <div class="switch">
+      <label>
+        Non
+        <%= f.check_box :status %>
+        <span class="lever"></span>
+        Oui
+      </label>
+    </div><br>
   </div>
+
+
   <div class="actions">
     <%= f.submit %>
   </div>

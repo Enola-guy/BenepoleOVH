@@ -13,9 +13,6 @@
 
 ActiveRecord::Schema.define(version: 20161210185913) do
 
-  # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
-
   create_table "festivals", force: :cascade do |t|
     t.string   "name"
     t.date     "date"
@@ -52,8 +49,8 @@ ActiveRecord::Schema.define(version: 20161210185913) do
     t.string   "last_sign_in_ip"
   end
 
-  add_index "personnes", ["email"], name: "index_personnes_on_email", unique: true, using: :btree
-  add_index "personnes", ["reset_password_token"], name: "index_personnes_on_reset_password_token", unique: true, using: :btree
+  add_index "personnes", ["email"], name: "index_personnes_on_email", unique: true
+  add_index "personnes", ["reset_password_token"], name: "index_personnes_on_reset_password_token", unique: true
 
   create_table "rapports", force: :cascade do |t|
     t.text     "comment"

@@ -1,3 +1,3 @@
 class Festival < ActiveRecord::Base
-	has_many:missions
+	has_many :missions
 end
